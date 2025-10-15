@@ -1,0 +1,55 @@
+kind: ClusterDeployment
+metadata:
+  name: trading-services-cluster
+  description: "Financial Trading Services Workshop Deployment"
+  version: "1.0.0"
+
+cluster:
+  name: "trading-cluster"
+  size: 5
+
+machines:
+  - hostname: "node1"
+    size: small
+
+  - hostname: "node2"
+    size: large
+
+  - hostname: "node3"
+    size: large
+
+  - hostname: "node4"
+    size: small
+
+
+services:
+  - name: "price-discovery-service"
+    description: "Market price discovery and calculation engine"
+    deployment:
+      machines: ["node2"]
+
+  - name: "position-management-service"
+    description: "Portfolio position tracking and management"
+    deployment:
+      machines: ["node1"]
+
+  - name: "market-data-service"
+    description: "Real-time market data ingestion and processing"
+    deployment:
+      machines: ["node3", "node4"]
+
+  - name: "risk-management-service"
+    description: "Risk calculation and monitoring system"
+    deployment:
+      machines: ["node3"]
+
+  - name: "fax-service"
+    description: "Legacy Fax service for sending faxes"
+    deployment:
+      machines: ["node2"]
+
+monitoring:
+  enabled: true
+  metrics_port: 9090
+  log_level: "INFO"
+  retention_days: 30

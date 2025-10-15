@@ -1,0 +1,35 @@
+kind: JobSchedule
+metadata:
+  name: overnight-risk-calculations
+  description: "Overnight batch jobs for risk calculation and analysis"
+  version: "1.0.0"
+
+schedule:
+  timezone: "America/New_York"
+
+jobs:
+  - name: "portfolio-risk-assessment"
+    description: "Comprehensive portfolio risk analysis and VaR calculations"
+    start_time: "18:00"
+    duration_hours: 1.5
+
+  - name: "market-risk-analysis"
+    description: "Market risk scenario analysis and stress testing"
+    start_time: "18:00"
+    duration_hours: 1
+
+  - name: "credit-risk-calculation"
+    description: "Credit risk assessment and counterparty exposure analysis"
+    start_time: "18:00"
+    duration_hours: 1.5
+
+resource_limits:
+  max_concurrent_jobs: 3
+  total_cpu_cores: 16
+  total_memory_gb: 32
+
+monitoring:
+  enabled: true
+  metrics_retention_days: 90
+  alert_on_failure: true
+  carbon_tracking: true

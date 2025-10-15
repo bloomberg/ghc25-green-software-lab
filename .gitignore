@@ -1,0 +1,11 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Distribution / packaging
+*.egg-info/
+
+.pytest_cache/
+venv/
+
+.github/
+.vscode/

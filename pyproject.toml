@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "workshop-svc"
+version = "0.1.0"
+description = "A toy financial trading venue simulation tool for workshops"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["simulation", "workshop"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[project.scripts]
+workshop = "src.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/example/workshop-svc"
+Documentation = "https://github.com/example/workshop-svc#readme"
+Repository = "https://github.com/example/workshop-svc"
+Issues = "https://github.com/example/workshop-svc/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
