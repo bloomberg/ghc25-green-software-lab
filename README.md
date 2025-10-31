@@ -18,8 +18,8 @@ alias python3=python3.12
 ### Setup
 
 ```bash
-git clone <repository-url>/workshop-svc
-cd workshop-svc
+git clone <repository-url>
+cd ghc25-green-software-lab
 ```
 
 Run the following command for validation that you are ready to start the workshop. You should see a service dashboard.
@@ -37,7 +37,7 @@ After completion let's pause together and wait for the presentation to continue 
 Start by exploring the system’s health and historical metrics.
 
 ```bash
-python3 workshop.py status                          # System health
+python3 workshop.py status                        # System health
 python3 workshop.py historical fax-service        # Historical data
 ```
 
@@ -46,8 +46,8 @@ You might have noticed a note about "Low utilization on large machine" in the `p
 To make changes to the deployments of services then you can edit the `deployment.yaml` file.
 
 ```bash
-workshop-svc/
-├── 📁 src/                       # Main folder
+ghc25-green-software-lab/
+├── 📁 src/                        # Main folder
 │   ├── 📁 configuration_files/
 │   │   ├── deployment.yaml        # Service deployment configuration
 ```
@@ -76,8 +76,8 @@ python3 workshop.py status                          # System health
 After reading the recommendations from the `python3 workshop.py status` and `python3 workshop.py latency` commands review the code and apply optimization in the function `getMarketData(api_client)` located in `get_market_data.py`.
 
 ```bash
-workshop-svc/
-├── 📁 src/                       # Main folder
+ghc25-green-software-lab/
+├── 📁 src/                        # Main folder
 │   ├── get_market_data.py         # Market data fetching
 ```
 
@@ -107,8 +107,8 @@ python3 workshop.py carbon                          # Carbon impact dashboard
 ```
 
 ```bash
-workshop-svc/
-├── 📁 src/                       # Main folder
+ghc25-green-software-lab/
+├── 📁 src/                        # Main folder
 │   ├── 📁 configuration_files/
 │   │   └── schedule.yaml          # Job scheduling configuration
 ```
