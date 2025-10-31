@@ -28,10 +28,10 @@ dev = [
 workshop = "src.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/example/workshop-svc"
-Documentation = "https://github.com/example/workshop-svc#readme"
-Repository = "https://github.com/example/workshop-svc"
-Issues = "https://github.com/example/workshop-svc/issues"
+Homepage = "https://github.com/bloomberg/ghc25-green-software-lab"
+Documentation = "https://github.com/bloomberg/ghc25-green-software-lab#readme"
+Repository = "https://github.com/bloomberg/ghc25-green-software-lab"
+Issues = "https://github.com/bloomberg/ghc25-green-software-lab/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
